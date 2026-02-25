@@ -1,0 +1,246 @@
+/* ========================================
+   ESTILOS GLOBALES
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* ========================================
+       PALETA DE COLORES - Star DG
+       Colores organizados por uso
+    ======================================== */
+    
+    /* Colores Principales - Tonos Azul */
+    --primary: #264b69;        /* Azul oscuro - Color principal */
+    --primary-light: #3d7385;  /* Azul verdoso */
+    --primary-dark: #1a3549;   /* Azul más oscuro */
+    
+    /* Colores Secundarios */
+    --secondary: #588ea7;      /* Azul medio */
+    --secondary-light: #86bac1;
+    --secondary-dark: #3d7385;
+    
+    /* Colores de Acento */
+    --accent: #a1c5ce;         /* Azul claro - Acentos */
+    --accent-light: #b8d4db;
+    --accent-dark: #86bac1;
+    
+    /* Colores Especiales */
+    --purple: #588ea7;         /* Azul medio - Secciones destacadas */
+    --purple-light: #86bac1;
+    --purple-dark: #3d7385;
+    
+    /* Colores de Alerta */
+    --danger: #e74d3c;         /* Rojo/Coral - Ofertas y alertas */
+    --danger-light: #ec7063;
+    --danger-dark: #cb4335;
+    
+    /* Colores Base */
+    --background: #ffffff;
+    --foreground: #1f2937;
+    --muted: #f3f4f6;
+    --muted-foreground: #6b7280;
+    --border: #e5e7eb;
+    --card: #ffffff;
+    
+    /* Colores de Estado */
+    --success: #10b981;
+    --destructive: #ef4444;
+    
+    /* Radio y sombras */
+    --radius: 10px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* ========================================
+   HEADER CORREGIDO
+======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+/* IMPORTANTE: altura corregida */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--foreground);
+}
+
+/* IMAGEN DEL LOGO (CORRECCIÓN PRINCIPAL) */
+.logo img {
+    width: 40px;
+    height: auto;
+    display: block;
+}
+
+/* Texto del logo */
+.logo-text {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* ========================================
+   BUSCADOR
+======================================== */
+
+.search-bar {
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+}
+
+.search-input {
+    width: 100%;
+    padding: 8px 15px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-family: inherit;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* ========================================
+   BOTONES HEADER
+======================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-cart {
+    position: relative;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -5px;
+    right: -8px;
+    background-color: var(--destructive);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-whatsapp {
+    padding: 8px 15px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1fad50;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.05));
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    padding: 12px 25px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-dark);
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    background-color: #374151;
+    color: #d1d5db;
+    padding: 3rem 0;
+    margin-top: 4rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+}

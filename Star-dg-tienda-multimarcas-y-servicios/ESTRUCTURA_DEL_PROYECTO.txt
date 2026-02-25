@@ -1,0 +1,108 @@
+====================================================
+NUEVA ESTRUCTURA - STAR DG TIENDA MULTIMARCAS
+Optimizada para Netlify + GitHub Pages
+====================================================
+
+📁 ESTRUCTURA OPTIMIZADA PARA NETLIFY
+====================================================
+
+Star dg tienda multimarca/
+├── index.html                    (Página principal)
+├── css/
+│   ├── estilos.css              (Estilos de Inicio)
+│   ├── servicios.css            (Estilos de Servicios)
+│   └── general.css              (Estilos generales)
+├── js/
+│   ├── main.js                  (Funciones JS de Inicio)
+│   └── servicios.js             (Funciones JS de Servicios)
+├── imagenes/
+│   ├── logo.png                 (Logo de la empresa)
+│   └── categorias/
+│       └── tecnologia.jpg       (Imágenes de categorías)
+├── productos/
+│   ├── ropa/
+│   │   ├── css/
+│   │   └── js/
+│   └── tenis-nacionales/
+│       ├── index.html           (Página de Tenis Nacionales)
+│       ├── css/
+│       │   └── tenis.css
+│       └── js/
+│           └── tenis.js
+└── servicios/
+    ├── index.html               (Página de Servicios Técnicos)
+    ├── css/
+    └── js/
+
+
+📋 CAMBIOS REALIZADOS
+====================================================
+
+1. Eliminada carpeta "Pagina Web" innecesaria
+   - Los archivos ahora están en la raíz del proyecto
+
+2. Eliminadas carpetas "Index" redundantes
+   - Ahora cada página tiene su propio index.html en su carpeta
+
+3. Nombres de carpetas simplificados
+   - "Tenis nacionales" → "tenis-nacionales" (guiones, sin espacios)
+  avascrit" - "J → "js" (corrección de ortografía)
+  gcategorias" - "Im → "imagenes/categorias"
+
+4. Rutas actualizadas en
+   - Enlaces todos los archivos HTML internos corregidos
+   - Referencias a CSS y JS actualizadas
+
+
+🔗 ENLACESUALIZADOS
+ ACT====================================================
+
+INICIO → SERVICIOS:
+✓ serviciosINICIO →/index.html
+
+ TENIS NACIONALES:
+✓ productos/tenis-nacionales/index.html
+
+SERVICIOS → INICIO:
+✓ ../index.html
+
+TENIS NACIONALES → INICIO:
+✓ ../../index.html
+
+
+🚀 PUBLICACIÓN EN NETLIFY
+====================================================
+
+Para publicar en Netlify:
+
+1. Sube esta carpeta a GitHub
+   - Crea un repositorio nuevo en GitHub
+   - Sube todos los archivos de esta carpeta
+
+2. Conecta con Netlify:
+   - Ve a https://app.netlify.com
+   - "Add new site" → "Import an existing project"
+   - Selecciona tu repositorio de GitHub
+   - Netlify detectará automáticamente la configuración
+
+3. Configuración automática:
+   - Build command: (vacío)
+   - Publish directory: . (raíz)
+   - Netlify detectará index.html automáticamente
+
+4. Tu sitio estará disponible en:
+   - https://[tu-sitio].netlify.app
+
+
+📱 ESTRUCTURA RESPONSIVA
+====================================================
+
+La estructura es compatible con:
+- Netlify Drop (arrastrar y soltar)
+- GitHub Pages
+- Cualquier hosting estático
+
+
+====================================================
+Última actualización: 2026
+====================================================

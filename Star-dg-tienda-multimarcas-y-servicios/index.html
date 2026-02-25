@@ -1,0 +1,591 @@
+<!DOCTYPE html> 
+<!-- Declara que el documento está escrito en HTML5.
+     Evita que el navegador entre en modo compatibilidad antiguo. -->
+
+<html lang="es">
+<!-- Etiqueta raíz del documento.
+     lang="es" indica que el idioma principal es español (mejora SEO y accesibilidad). -->
+
+<head>
+    <!-- Sección de configuración del documento.
+         Aquí van metadatos, enlaces a CSS, título, etc.
+         Nada de esto se muestra directamente en la página. -->
+
+    <!-- Define la codificación de caracteres.
+         Permite usar tildes, ñ y símbolos especiales correctamente. -->
+    <meta charset="UTF-8">
+
+    <!-- Hace que la página sea responsive.
+         Ajusta el ancho al tamaño del dispositivo (celular, tablet, etc.). -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Descripción de la página.
+         Google la muestra en los resultados de búsqueda. Mejora SEO. -->
+    <meta name="description" content="Star DG Tienda Multimarcas y Servicios - Tu tienda online de confianza">
+
+    <!-- Palabras clave relacionadas con la página.
+         Hoy en día tiene poco impacto en SEO, pero no afecta negativamente. -->
+    <meta name="keywords" content="tienda online, productos, servicios digitales, Colombia">
+
+    <!-- Enlace externo al archivo CSS.
+         Conecta el HTML con los estilos.
+         ../ significa: subir una carpeta hacia arriba y luego entrar a Css -->
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <!-- Título que aparece en la pestaña del navegador -->
+    <title>Star DG - Tienda Multimarcas y Servicios</title>
+
+</head>
+
+<body>
+
+    <!-- ========================================
+         CARRITO DE COMPRAS (PANEL LATERAL)
+         ======================================== -->
+    <div class="cart-overlay"></div>
+    <div class="cart-panel">
+        <div class="cart-header">
+            <h3>🛒 Tu Carrito</h3>
+            <button class="btn-close-cart">×</button>
+        </div>
+        <div class="cart-items">
+            <!-- Los items del carrito se renderizan con JS -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span class="cart-total-label">Total:</span>
+                <span class="cart-total-value">$0</span>
+            </div>
+            <button class="btn-checkout">Finalizar Compra por WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- ========================================
+         HEADER - ENCABEZADO DE LA PÁGINA
+         Contiene: Logo, barra de búsqueda, menú de navegación, carrito y botón WhatsApp
+         ======================================== -->
+    <header>
+    <!-- Contenedor principal del header -->
+    <div class="container header-content">
+
+        <!-- Logo de la empresa -->
+        <!-- El enlace permite que al hacer clic en el logo vuelva al inicio -->
+        <a href="#" class="logo">
+
+            <!-- Imagen del logo -->
+            <!-- src: ruta donde está guardada la imagen -->
+            <!-- alt: texto alternativo para accesibilidad y SEO -->
+          <img src="imagenes/logo.png" alt="Logo Star DG">
+
+
+
+            <!-- Nombre de la marca -->
+            <span class="logo-text">Star DG</span>
+
+        </a>
+
+
+            <!-- Barra de búsqueda para buscar productos (visible en desktop) -->
+            <form class="search-bar" id="searchForm">
+                <input type="text" class="search-input" id="searchInput" placeholder="Buscar productos...">
+                <button type="submit" class="search-btn"><i class="fas fa-search"></i></button>
+            </form>
+
+            <!-- Menú de navegación principal (visible en desktop) -->
+            <nav class="nav-desktop">
+                <a href="#inicio">Inicio</a>
+                <a href="#productos">Productos</a>
+                <a href="servicios/index.html">Servicios</a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+
+            <!-- Redes Sociales en Header -->
+            <div class="header-social">
+                <a href="https://www.instagram.com/stardgtiendamultimarcas?igsh=MTY1cGtybmI2cnB1NQ==" target="_blank" class="social-link instagram">Instagram</a>
+                <a href="https://www.facebook.com/share/1F6zSbXtwh/" target="_blank" class="social-link facebook">Facebook</a>
+            </div>
+
+            <!-- Acciones del header: carrito, WhatsApp y menú móvil -->
+            <div class="header-actions">
+                <!-- Botón del carrito de compras con contador de items -->
+                <button class="btn-cart">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="9" cy="21" r="1"></circle>
+                        <circle cx="20" cy="21" r="1"></circle>
+                        <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                    </svg>
+                    <!-- Badge que muestra la cantidad de productos en el carrito -->
+                    <span class="cart-badge">0</span>
+                </button>
+
+                <!-- Botón de WhatsApp para contacto directo -->
+                <a href="https://wa.me/c/573046188207" target="_blank" class="btn-whatsapp">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421-7.403h-.004a9.87 9.87 0 00-5.031 1.378c-3.055 2.364-3.905 6.75-1.896 10.157 2.009 3.405 6.581 4.637 10.205 2.831l.001-.001a9.936 9.936 0 005.493-8.236c.501-5.174-3.797-9.862-8.947-9.829"></path>
+                    </svg>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- Botón de menú para dispositivos móviles -->
+                <button class="btn-menu">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Menú Móvil -->
+    <div class="mobile-menu">
+        <a href="#inicio">Inicio</a>
+        <a href="#productos">Productos</a>
+        <a href="servicios/index.html">Servicios</a>
+        <a href="#contacto">Contacto</a>
+        <div class="mobile-social">
+            <a href="https://www.instagram.com/stardgtiendamultimarcas?igsh=MTY1cGtybmI2cnB1NQ==" target="_blank" class="social-link instagram">Instagram</a>
+            <a href="https://www.facebook.com/share/1F6zSbXtwh/" target="_blank" class="social-link facebook">Facebook</a>
+        </div>
+    </div>
+
+    <!-- ========================================
+         HERO SECTION - SECCIÓN PRINCIPAL
+         Contiene: Mensaje de bienvenida, beneficios principales, CTA y imagen destacada
+         ======================================== -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <!-- Caja de bienvenida con información principal de Star DG -->
+            <div class="welcome-box">
+                <!-- Encabezado de bienvenida con icono y texto -->
+                <div class="welcome-header">
+                    <div class="welcome-icon"></div>
+                    <div>
+                        <h2>Bienvenido a Star DG Tienda Multimarca y Servicios</h2>
+                        <p>Tu tienda online de confianza con productos variados y servicios digitales al alcance de un clic.</p>
+                    </div>
+                </div>
+
+                <!-- Grid con los dos beneficios principales -->
+                <div class="benefits-grid">
+                    <!-- Beneficio 1: Compra fácil y envío gratis -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon">🛒</div>
+                        <div class="benefit-content">
+                            <h3>Compra fácil, paga contraentrega</h3>
+                            <p>Envíos GRATIS a todo Colombia 🇨🇴</p>
+                        </div>
+                    </div>
+
+                    <!-- Beneficio 2: Variedad de productos -->
+                    <div class="benefit-item">
+                        <div class="benefit-icon"></div>
+                        <div class="benefit-content">
+                            <h3>Venta de multiproductos</h3>
+                            <p>Ropa, calzado, tecnología, hogar, salud, belleza, mascotas y más</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección principal del hero con contenido y imagen -->
+            <div class="hero-main">
+                <!-- Contenido del lado izquierdo -->
+                <div class="hero-content">
+                    <!-- Título principal con palabra destacada -->
+                    <h1>Tecnología de <span class="highlight">Calidad Premium</span></h1>
+                    
+                    <!-- Descripción de la tienda -->
+                    <p>Descubre nuestra amplia selección de productos tecnológicos, accesorios y servicios profesionales. Garantía, calidad y atención personalizada en cada compra.</p>
+
+                    <!-- Botones de llamada a la acción (CTA) -->
+                    <div class="cta-buttons">
+                        <!-- Botón primario para ver productos -->
+                        <a href="#productos" class="btn-primary">
+                            Ver Productos
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                                <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+
+                        <!-- Botón secundario para contactar por WhatsApp -->
+                        <a href="https://wa.me/c/573046188207" target="_blank" class="btn-secondary">
+                            💬 WhatsApp
+                        </a>
+                    </div>
+
+                    <!-- Estadísticas principales de la tienda -->
+                    <div class="hero-stats">
+                        <!-- Estadística 1: Garantía -->
+                        <div class="stat">
+                            <div class="stat-value">100%</div>
+                            <div class="stat-label">Garantía</div>
+                        </div>
+
+                        <!-- Estadística 2: Soporte disponible -->
+                        <div class="stat">
+                            <div class="stat-value">24/7</div>
+                            <div class="stat-label">Soporte</div>
+                        </div>
+
+                        <!-- Estadística 3: Envío gratis -->
+                        <div class="stat">
+                            <div class="stat-value">Gratis</div>
+                            <div class="stat-label">Envío</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contenido del lado derecho: Imagen destacada -->
+                <div class="hero-image">
+                    <!-- Placeholder de imagen del producto destacado -->
+                    <div class="hero-image-placeholder">
+                        <div class="hero-image-icon">📱</div>
+                        <div class="hero-image-title">Producto Destacado</div>
+                        <div class="hero-image-subtitle">Imagen del producto principal</div>
+                    </div>
+
+                    <!-- Badge con descuento especial -->
+                    <div class="hero-badge">
+                        <div class="hero-badge-label">Descuento Especial</div>
+                        <div class="hero-badge-value">Hasta 40%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         CATEGORIES SECTION - SECCIÓN DE CATEGORÍAS
+         Contiene: Grid de 6 categorías de productos con iconos
+         ======================================== -->
+    <section class="categories" id="productos">
+        <div class="container">
+            <!-- Encabezado de la sección -->
+            <div class="section-header">
+                <h2>Explora Nuestras Categorías</h2>
+                <p>Encuentra todo lo que necesitas en un solo lugar</p>
+            </div>
+
+            <!-- Grid con categorías de productos -->
+            <div class="categories-grid">
+                <!-- Categoría 1: Tenis Nacionales -->
+                <a href="productos/tenis-nacionales/index.html" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">👟</div>
+                    <div class="category-info">
+                        <div class="category-name">Tenis Nacionales</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 2: Tenis Importados -->
+                <a href="#tenis-importados" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">👟</div>
+                    <div class="category-info">
+                        <div class="category-name">Tenis Importados</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 3: Ropa -->
+                <a href="#ropa" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">👔</div>
+                    <div class="category-info">
+                        <div class="category-name">Ropa</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 4: Hogar -->
+                <a href="#hogar" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">🏠</div>
+                    <div class="category-info">
+                        <div class="category-name">Hogar</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 5: Deportes -->
+                <a href="#deportes" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">⚽</div>
+                    <div class="category-info">
+                        <div class="category-name">Deportes</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 5: Tecnologías -->
+                <a href="#tecnologias" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">💻</div>
+                    <div class="category-info">
+                        <div class="category-name">Tecnologías</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 6: Servicios Técnicos -->
+                <a href="servicios/index.html" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">🔧</div>
+                    <div class="category-info">
+                        <div class="category-name">Servicios Técnicos</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 7: Streaming -->
+                <a href="#streaming" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">🎬</div>
+                    <div class="category-info">
+                        <div class="category-name">Streaming</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 8: Novedades -->
+                <a href="#novedades" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">✨</div>
+                    <div class="category-info">
+                        <div class="category-name">Novedades</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 9: Mascotas -->
+                <a href="#mascotas" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">🐾</div>
+                    <div class="category-info">
+                        <div class="category-name">Mascotas</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 10: Salud -->
+                <a href="#salud" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">💊</div>
+                    <div class="category-info">
+                        <div class="category-name">Salud</div>
+                    </div>
+                </a>
+
+                <!-- Categoría 11: Juguetería -->
+                <a href="#jugueteria" class="category-card">
+                    <div class="category-placeholder" style="display: flex;">🧸</div>
+                    <div class="category-info">
+                        <div class="category-name">Juguetería</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         SERVICES SECTION - SECCIÓN DE SERVICIOS
+         Contiene: 6 tarjetas de servicios y sección de beneficios
+         ======================================== -->
+    <section class="services" id="servicios">
+        <div class="container">
+            <!-- Encabezado de la sección -->
+            <div class="section-header">
+                <h2>Servicios que Ofrecemos</h2>
+                <p>Descubre nuestros servicios profesionales diseñados para satisfacer todas tus necesidades</p>
+            </div>
+
+            <!-- Grid con 6 servicios principales -->
+            <div class="services-grid">
+                <!-- Servicio 1: Servicios Digitales y Financieros -->
+                <div class="service-card">
+                    <h3 class="service-title">Servicios Digitales y Financieros</h3>
+                    <p class="service-description">Recargas móviles, pagos de servicios públicos y trámites en línea de manera ágil y confiable.</p>
+                    <div class="service-check">
+                        <span>✔️</span>
+                        <span>Disponible ahora</span>
+                    </div>
+                </div>
+
+                <!-- Servicio 2: Apuestas y Juegos de Azar -->
+                <div class="service-card">
+                    <h3 class="service-title">Apuestas y Juegos de Azar</h3>
+                    <p class="service-description">Acceso a plataformas seguras y reconocidas para tu entretenimiento.</p>
+                    <div class="service-check">
+                        <span>✔️</span>
+                        <span>Disponible ahora</span>
+                    </div>
+                </div>
+
+                <!-- Servicio 3: Streaming y Entretenimiento -->
+                <div class="service-card">
+                    <h3 class="service-title">Streaming y Entretenimiento</h3>
+                    <p class="service-description">Cuentas y combos de tus plataformas favoritas al mejor precio.</p>
+                    <div class="service-check">
+                        <span>✔️</span>
+                        <span>Disponible ahora</span>
+                    </div>
+                </div>
+
+                <!-- Servicio 4: Reparación Tecnológica -->
+                <div class="service-card">
+                    <h3 class="service-title">Reparación Tecnológica</h3>
+                    <p class="service-description">Servicio técnico profesional para celulares, PCs y otros dispositivos electrónicos.</p>
+                    <div class="service-check">
+                        <span>✔️</span>
+                        <span>Disponible ahora</span>
+                    </div>
+                </div>
+
+                <!-- Servicio 5: Instalación de Sistemas CCTV -->
+                <div class="service-card">
+                    <h3 class="service-title">Instalación de Sistemas CCTV</h3>
+                    <p class="service-description">Instalación de cámaras de seguridad, configuración de DVR/NVR, monitoreo remoto y soporte técnico especializado.</p>
+                    <div class="service-check">
+                        <span>✔️</span>
+                        <span>Disponible ahora</span>
+                    </div>
+                </div>
+
+                <!-- Servicio 6: Seguridad Profesional -->
+                <div class="service-card">
+                    <h3 class="service-title">Seguridad Profesional</h3>
+                    <p class="service-description">Protege tu hogar o negocio con soluciones confiables y tecnología de punta.</p>
+                    <div class="service-check">
+                        <span>✔️</span>
+                        <span>Disponible ahora</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sección: ¿Por qué comprar con nosotros? -->
+            <div class="why-choose">
+                <h3>¿Por qué comprar con nosotros?</h3>
+
+                <!-- Grid con 5 beneficios principales -->
+                <div class="benefits-list">
+                    <!-- Beneficio 1: Pago contraentrega -->
+                    <div class="benefit-box">
+                        <div class="benefit-box-icon">✔️</div>
+                        <div class="benefit-box-text">Pago contraentrega</div>
+                    </div>
+
+                    <!-- Beneficio 2: Envíos gratis -->
+                    <div class="benefit-box">
+                        <div class="benefit-box-icon">✔️</div>
+                        <div class="benefit-box-text">Envíos GRATIS a todo el país</div>
+                    </div>
+
+                    <!-- Beneficio 3: Atención personalizada -->
+                    <div class="benefit-box">
+                        <div class="benefit-box-icon">✔️</div>
+                        <div class="benefit-box-text">Atención personalizada por WhatsApp</div>
+                    </div>
+
+                    <!-- Beneficio 4: Respuesta rápida -->
+                    <div class="benefit-box">
+                        <div class="benefit-box-icon">✔️</div>
+                        <div class="benefit-box-text">Respuesta rápida</div>
+                    </div>
+
+                    <!-- Beneficio 5: Compras seguras -->
+                    <div class="benefit-box">
+                        <div class="benefit-box-icon">✔️</div>
+                        <div class="benefit-box-text">Compras 100% seguras</div>
+                    </div>
+                </div>
+
+                <!-- Botón de CTA para contactar por WhatsApp -->
+                <div class="why-choose-cta">
+                    <a href="https://wa.me/c/573046188207" target="_blank">
+                        💬 Contáctanos por WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         FOOTER - PIE DE PÁGINA
+         Contiene: Información de contacto, redes sociales, enlaces rápidos y políticas
+         ======================================== -->
+    <footer id="contacto">
+        <div class="container">
+            <!-- Grid principal del footer con 4 columnas -->
+            <div class="footer-grid">
+                <!-- Columna 1: Información de la empresa y redes sociales -->
+                <div class="footer-section">
+                    <!-- Logo y nombre de la empresa -->
+                    <div class="footer-logo">
+                        <div class="footer-logo-icon">⭐</div>
+                        <div class="footer-logo-text">Star DG</div>
+                    </div>
+
+                    <!-- Descripción de la empresa -->
+                    <p class="footer-description">Tu tienda online de confianza con productos variados y servicios digitales al alcance de un clic.</p>
+
+                    <!-- Enlaces a redes sociales -->
+                    <div class="social-links">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/stardgtiendamultimarcas?igsh=MTY1cGtybmI2cnB1NQ==" target="_blank" class="social-link instagram">Instagram</a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/1F6zSbXtwh/" target="_blank" class="social-link facebook">Facebook</a>
+                    </div>
+                </div>
+
+                <!-- Columna 2: Enlaces rápidos a secciones principales -->
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="servicios/index.html">Servicios</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 3: Políticas y términos legales -->
+                <div class="footer-section">
+                    <h4>Políticas</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Política de Devoluciones</a></li>
+                        <li><a href="#">Política de Envíos</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+
+                <!-- Columna 4: Información de contacto -->
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <ul>
+                        <!-- WhatsApp -->
+                        <li><a href="https://wa.me/c/573046188207" target="_blank">💬 WhatsApp</a></li>
+
+                        <!-- Email -->
+                        <li><a href="mailto:stardgtiendamultimarcas@gmail.com">📧 Email</a></li>
+
+                        <!-- Disponibilidad -->
+                        <li><span>📞 Disponible 24/7</span></li>
+
+                        <!-- Ubicación -->
+                        <li><span>📍 Colombia 🇨🇴</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Sección inferior del footer con copyright y enlaces legales -->
+            <div class="footer-divider">
+                <div class="footer-bottom">
+                    <!-- Copyright -->
+                    <p>&copy; 2026 Star DG Tienda Multimarcas y Servicios. Todos los derechos reservados.</p>
+
+                    <!-- Enlaces legales -->
+                    <div class="footer-links">
+                        <a href="#">Términos</a>
+                        <a href="#">Privacidad</a>
+                        <a href="#">Cookies</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mensaje de agradecimiento final -->
+            <div class="thank-you-message">
+                <p>✨ Gracias por confiar en Star DG. Compra fácil, paga al recibir y disfruta envíos gratis en todo Colombia.</p>
+            </div>
+        </div>
+    </footer>
+<script src="js/main.js"></script>
+
+</body>
+</html>

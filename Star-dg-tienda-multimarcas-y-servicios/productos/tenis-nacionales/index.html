@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tenis Nacionales - Star DG Tienda Multimarcas</title>
+    <link rel="stylesheet" href="css/tenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <a href="../../index.html" class="logo">
+                <img src="../../imagenes/logo.png" alt="Star DG Logo" class="logo-img">
+                <span>Star DG</span>
+            </a>
+            
+            <nav class="nav-desktop">
+                <a href="../../index.html">Inicio</a>
+                <a href="index.html" class="active">Tenis Nacionales</a>
+                <a href="#tenis-importados">Tenis Importados</a>
+                <a href="#ropa">Ropa</a>
+                <a href="../../servicios/index.html">Servicios</a>
+            </nav>
+
+            <div class="header-actions">
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span id="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Tenis Nacionales</h1>
+            <p>Los mejores tenis de producción nacional con la mejor calidad y precios accesibles</p>
+        </div>
+    </section>
+
+    <!-- Productos Section -->
+    <section class="productos-section">
+        <div class="container">
+            <h2 class="section-title">Nuestra Colección</h2>
+            
+            <div class="productos-grid" id="productos-grid">
+                <!-- Producto 1 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+1" alt="Tenis Nacional Modelo 1">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Clásico Deportivo</h3>
+                        <p class="producto-descripcion">Tenis cómodo y resistente, ideal para uso diario y actividades deportivas. Disponible en varios colores.</p>
+                        <p class="producto-precio">$89.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Clásico Deportivo', 89900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Cl%C3%A1sico%20Deportivo" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+2" alt="Tenis Nacional Modelo 2">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Urbana Jordan</h3>
+                        <p class="producto-descripcion">Estilo urbano moderno con tecnología de amortiguación avanzada. Perfecto para jóvenes.</p>
+                        <p class="producto-precio">$149.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Urbana Jordan', 149900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Urbana%20Jordan" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+3" alt="Tenis Nacional Modelo 3">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Running Pro</h3>
+                        <p class="producto-descripcion">Diseñado para corredores profesionales con suela antideslizante y máxima comodidad.</p>
+                        <p class="producto-precio">$179.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Running Pro', 179900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Running%20Pro" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+4" alt="Tenis Nacional Modelo 4">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Basketball Elite</h3>
+                        <p class="producto-descripcion">Tenis de alto rendimiento para basketball con soporte de tobillo reforzado.</p>
+                        <p class="producto-precio">$199.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Basketball Elite', 199900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Basketball%20Elite" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+5" alt="Tenis Nacional Modelo 5">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Casual Flex</h3>
+                        <p class="producto-descripcion">Estilo casual perfecto para el día a día. Materiales transpirables y suela cómoda.</p>
+                        <p class="producto-precio">$79.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Casual Flex', 79900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Casual%20Flex" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+6" alt="Tenis Nacional Modelo 6">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Training Gym</h3>
+                        <p class="producto-descripcion">Especialmente diseñado para entrenamiento en gym con soporte lateral y tracción superior.</p>
+                        <p class="producto-precio">$159.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Training Gym', 159900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Training%20Gym" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+7" alt="Tenis Nacional Modelo 7">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Senderismo Montaña</h3>
+                        <p class="producto-descripcion">Resistente y duradero para caminatas en montaña. Suela reforzada con agarre extra.</p>
+                        <p class="producto-precio">$189.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Senderismo Montaña', 189900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Senderismo%20Montaña" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="producto-card">
+                    <div class="producto-imagen">
+                        <img src="https://via.placeholder.com/300x300/1A237E/FFFFFF?text=Tenis+Nacional+8" alt="Tenis Nacional Modelo 8">
+                    </div>
+                    <div class="producto-info">
+                        <h3>Tenis Escolar Clásico</h3>
+                        <p class="producto-descripcion">Ideal para estudiantes. Cómodo, resistente y con diseño clásico atemporal.</p>
+                        <p class="producto-precio">$69.900 COP</p>
+                        <div class="producto-acciones">
+                            <button class="btn-carrito" onclick="agregarAlCarrito('Tenis Escolar Clásico', 69900)">
+                                <i class="fas fa-cart-plus"></i> Agregar al Carrito
+                            </button>
+                            <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20el%20Tenis%20Escolar%20Cl%C3%A1sico" class="btn-whatsapp" target="_blank">
+                                <i class="fab fa-whatsapp"></i> WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carrito Flotante -->
+    <div class="carrito-flotante" id="carrito-flotante">
+        <div class="carrito-header">
+            <h3><i class="fas fa-shopping-cart"></i> Carrito de Compras</h3>
+            <button class="cerrar-carrito" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="carrito-items" id="carrito-items">
+            <p class="carrito-vacio">Tu carrito está vacío</p>
+        </div>
+        <div class="carrito-footer">
+            <div class="carrito-total">
+                <span>Total:</span>
+                <span id="carrito-total">$0 COP</span>
+            </div>
+            <button class="btn-checkout" onclick="finalizarCompra()">
+                <i class="fab fa-whatsapp"></i> Finalizar Compra por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleCart()"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>Star DG Tienda Multimarcas</h4>
+                <p>Tu tienda de confianza para productos nacionales e importados</p>
+                <div class="social-links">
+                    <a href="https://wa.me/573000000000" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="mailto:stardgtiendamultimarcas@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="../../index.html">Inicio</a></li>
+                    <li><a href="#tenis-importados">Tenis Importados</a></li>
+                    <li><a href="#ropa">Ropa</a></li>
+                    <li><a href="../../servicios/index.html">Servicios Técnicos</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><i class="fab fa-whatsapp"></i> +57 300 000 0000</p>
+                <p><i class="fas fa-envelope"></i> stardgtiendamultimarcas@gmail.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> Colombia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Star DG Tienda Multimarcas. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="js/tenis.js"></script>
+</body>
+</html>

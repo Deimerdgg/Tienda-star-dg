@@ -1,0 +1,651 @@
+/* ========================================
+   ESTILOS SERVICIOS - STAR DG
+   Reparación PC, Celulares y CCTV
+   ======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    /* Colores principales - Tonos Azul Professional */
+    --primary: #264b69;
+    --primary-light: #3d7385;
+    --primary-dark: #1a3549;
+    --accent: #588ea7;
+    --accent-coral: #86bac1;
+    --accent-green: #10b981;
+    
+    /* Colores de fondo */
+    --background: #ffffff;
+    --background-alt: #f8fafc;
+    --foreground: #1f2937;
+    --muted: #f1f5f9;
+    --muted-foreground: #64748b;
+    
+    /* Colores de bordes y cards */
+    --border: #e2e8f0;
+    --card: #ffffff;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    
+    /* Colores de estado */
+    --success: #10b981;
+    --destructive: #ef4444;
+    --warning: #f59e0b;
+    
+    --radius: 12px;
+    --radius-sm: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background);
+    color: var(--foreground);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: var(--background);
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--foreground);
+}
+
+.logo img {
+    width: 45px;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.logo-text {
+    font-weight: 700;
+    font-size: 1.3rem;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.main-nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 18px;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+    color: var(--muted-foreground);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: var(--muted);
+    color: var(--primary);
+}
+
+.nav-link.active {
+    background-color: var(--primary);
+    color: white;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: #25d366;
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1da852;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+}
+
+/* ========================================
+   HERO SECTION
+   ======================================== */
+
+.hero {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.08), rgba(124, 58, 237, 0.05));
+    border-bottom: 1px solid var(--border);
+}
+
+.hero-content {
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.hero-content h1 i {
+    color: var(--primary);
+    margin-right: 12px;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: var(--muted-foreground);
+    margin-bottom: 2rem;
+}
+
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    font-weight: 500;
+    color: var(--foreground);
+    box-shadow: var(--card-shadow);
+}
+
+.badge i {
+    color: var(--primary);
+}
+
+/* ========================================
+   SERVICES SECTIONS
+   ======================================== */
+
+.services-section {
+    padding: 5rem 0;
+}
+
+.services-section.alt-bg {
+    background-color: var(--background-alt);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.section-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    border-radius: 50%;
+    margin-bottom: 1.5rem;
+}
+
+.section-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.section-header h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--foreground);
+}
+
+.section-header p {
+    font-size: 1.1rem;
+    color: var(--muted-foreground);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* ========================================
+   SERVICE CARDS
+   ======================================== */
+
+.service-card {
+    position: relative;
+    background-color: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--card-shadow);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    border-color: var(--primary-light);
+}
+
+.service-card.featured {
+    border-color: var(--primary);
+    background: linear-gradient(to bottom, rgba(37, 99, 235, 0.03), transparent);
+}
+
+.service-badge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: linear-gradient(135deg, var(--primary), var(--accent));
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.service-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(124, 58, 237, 0.1));
+    border-radius: var(--radius-sm);
+    margin-bottom: 1.5rem;
+}
+
+.service-icon i {
+    font-size: 1.8rem;
+    color: var(--primary);
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--foreground);
+}
+
+.service-list {
+    list-style: none;
+    margin-bottom: 1.5rem;
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 0.6rem;
+    color: var(--muted-foreground);
+    font-size: 0.95rem;
+}
+
+.service-list li::before {
+    content: '\f00c';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    color: var(--success);
+    font-size: 0.8rem;
+    top: 4px;
+}
+
+.service-price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 1rem;
+}
+
+.btn-service {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-service:hover {
+    background-color: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+}
+
+/* ========================================
+   WHY US SECTION
+   ======================================== */
+
+.why-us {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, rgba(37, 99, 235, 0.05), rgba(124, 58, 237, 0.03));
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--card);
+    border-radius: var(--radius);
+    box-shadow: var(--card-shadow);
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, var(--accent-green), var(--primary));
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.feature-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.feature-card h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+    color: var(--muted-foreground);
+    font-size: 0.95rem;
+}
+
+/* ========================================
+   CONTACT SECTION
+   ======================================== */
+
+.contact-section {
+    padding: 5rem 0;
+}
+
+.contact-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--card);
+    border: 2px solid var(--border);
+    border-radius: var(--radius);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-shadow);
+}
+
+.contact-card.whatsapp {
+    border-color: #25d366;
+    background: linear-gradient(to right, rgba(37, 211, 102, 0.05), transparent);
+}
+
+.contact-card.whatsapp:hover {
+    background: linear-gradient(to right, rgba(37, 211, 102, 0.1), transparent);
+}
+
+.contact-card.whatsapp i {
+    color: #25d366;
+}
+
+.contact-card.phone {
+    border-color: var(--primary);
+}
+
+.contact-card.phone i {
+    color: var(--primary);
+}
+
+.contact-card i {
+    font-size: 2.5rem;
+}
+
+.contact-card h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+}
+
+.contact-card p {
+    color: var(--muted-foreground);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+
+footer {
+    background-color: #1f2937;
+    color: #d1d5db;
+    padding: 4rem 0 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-section h4 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.footer-section p {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.footer-section a {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #d1d5db;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: var(--primary-light);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid #374151;
+}
+
+.footer-bottom p {
+    font-size: 0.9rem;
+    color: #9ca3af;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 1rem 0;
+        gap: 1rem;
+    }
+
+    .main-nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .hero-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .section-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .hero {
+        padding: 2.5rem 0;
+    }
+
+    .hero-content h1 {
+        font-size: 1.7rem;
+    }
+
+    .service-card {
+        padding: 1.5rem;
+    }
+
+    .btn-service {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+.service-card:nth-child(1) { animation-delay: 0.1s; }
+.service-card:nth-child(2) { animation-delay: 0.2s; }
+.service-card:nth-child(3) { animation-delay: 0.3s; }
+.service-card:nth-child(4) { animation-delay: 0.4s; }
+.service-card:nth-child(5) { animation-delay: 0.5s; }
+.service-card:nth-child(6) { animation-delay: 0.6s; }
